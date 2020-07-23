@@ -1,0 +1,19 @@
+.SideBar
+  .LeftHeader
+    .LeftHeader__list
+      %h3.LeftHeader__userName
+        = current_user.name
+      %ul.LeftHeader__iconList
+        %li.LeftHeader__Icon
+          = link_to '#' do
+            = icon('fas', 'edit')
+        %li.LeftHeader__Icon
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog')
+  .GroupList
+    .Group
+      = link_to '#' do
+        .Group__name
+          グループ名
+        .Group__message
+          最新のメッセージ
