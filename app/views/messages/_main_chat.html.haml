@@ -2,28 +2,24 @@
   .RightHeader
     .RightHeader__group
       .RightHeader__groupName
-        グループ名
+        = @group.name
       %ul.RightHeader__memberList
-        Member：
+        Menber: 
         %li.RightHeader__member
-          ユーザー名
-    = link_to '#',class: "RightHeader__editButton" do
-      Edit
+          - @group.users.each do |user|
+            =user.name
+    .RightHeader__editButton
+      = link_to edit_group_path(@group) do
+        EDIT 
+
   .MessageField
-    .MessageBox
-      .MessageInfo
-        .MessageInfo__userName
-          ユーザー名
-        .MessageInfo__date
-          2020/2/2 12:22
-      .Message
-        %p.Message__content
-          こんにちは
+    = render @messages
+  
   .Footer
-    %form.Form
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__contents
-        %input.Form__inputContent{type: 'text', placeholder: 'type a message'}
-        %label.Form__inputImage
+        = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+        = f.label :image, class: 'Form__inputImage' do
           = icon('far', 'image', class: 'Form__icon')
-          %input.Hidden{type: 'file'}
-      %input.Form__submit{type: 'submit', value: 'Send'} 
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'Form__submit'
