@@ -1,7 +1,8 @@
 .AccountPage {
 
-  width: 980px;
-  margin: 60px auto;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
   padding: 60px;
   background-image: url(http://ronherman.jp/images/recuit_main.png);
   background-size: cover;
@@ -24,7 +25,7 @@
       display: block;
       width: 60px;
       margin-top: 5px;
-      border-bottom: 1px solid #38aef0;
+      border-bottom: 1px solid #48d1cc;
     }
   }
 
@@ -32,6 +33,7 @@
     margin-top: 40px;
     color: #fff;
     background-color: #ccc;
+    border-radius: 6px;
   }
 }
 
@@ -46,18 +48,20 @@
     letter-spacing: 1px;
     font-size: 14px;
     font-weight: 200;
+    color: white;
     i {
       font-size: 11px;
     }
     .field_with_errors {
       display: inline-block;
-      color: #d65f4c;
+      color: #48d1cc;
       font-weight: 400;
     }
   }
   &__input--normal {
     input {
       box-sizing: border-box;
+      border-radius: 6px;
       width: 100%;
       padding: 10px;
       letter-spacing: 1px;
@@ -93,8 +97,26 @@
 
 .UserButton {
   margin-top: 20px;
-  color: #fff;
-  background-color: #38aef0;
+  background:#48d1cc;/*背景色*/
+  color: #00BCD4;/*=背景色*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2);
+  border-bottom: solid 2px #118e9e;
+  border-right: solid 2px #118e9e;
+  border-radius: 4px;
+  font-weight: bold;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
+  // color: #fff;
+  // background-color: #48d1cc;ssss
+  // justify-content: center;
+  // border-radius: 20px;
+  // border-bottom: solid 5px #20b2aa;
+  cursor: pointer;
+}
+
+.UserButton:active {
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  border-bottom: none;
 }
 
 #error_explanation {
@@ -105,7 +127,8 @@
 
   h2 {
     margin-bottom: 10px;
-    color: #d65f4c;
+    // 
+    color: #ccffff;
     font-size: 14px;
   }
 
@@ -119,5 +142,6 @@
     margin: 0;
     padding: 0;
     font-size: 13px;
+    color: white;
   }
 }

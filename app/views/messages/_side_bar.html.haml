@@ -5,16 +5,15 @@
         = current_user.name
       %ul.LeftHeader__iconList
         %li.LeftHeader__Icon
-          = link_to new_group_path do
-            = icon('fas', 'edit')
-        %li.LeftHeader__Icon
           = link_to edit_user_path(current_user) do
-            = icon('fas', 'cog')
+            = icon('fas', 'anchor')
   .GroupList
-    - current_user.groups.each do |group|
+    .Point 湘南エリア
+    -# - current_user.groups.each do |group|
+    - @groups.each do |group|
       .Group
         = link_to group_messages_path(group) do
           .Group__name
             = group.name
-          .Group__message
-            = group.show_last_message
+          -# .Group__message
+          -#   = group.show_last_message

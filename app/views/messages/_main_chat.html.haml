@@ -3,11 +3,15 @@
     .RightHeader__group
       .RightHeader__groupName
         = @group.name
-      %ul.RightHeader__memberList
-        Menber: 
-        %li.RightHeader__member
-          - @group.users.each do |user|
-            =user.name
+      -# %ul.RightHeader__memberList
+      -#   Menber: 
+      -#   %li.RightHeader__member
+      -#     - @group.users.each do |user|
+      -#       =user.name
+    -# .LeftHeader__Icon
+    -#   = link_to new_group_path do
+    -#     = icon('fas', 'edit')
+
     .RightHeader__editButton
       = link_to edit_group_path(@group) do
         EDIT 
@@ -18,8 +22,8 @@
   .Footer
     = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__contents
-        = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+        = f.text_area :content, class: 'Form__inputContent', placeholder: '波情報を入力'
         = f.label :image, class: 'Form__inputImage' do
           = icon('far', 'image', class: 'Form__icon')
           = f.file_field :image, class: 'Hidden'
-      = f.submit 'Send', class: 'Form__submit'
+      = f.submit 'SEND', class: 'Form__submit'

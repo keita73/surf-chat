@@ -1,3 +1,6 @@
 .SettingGroupForm
-  %h1 チャットグループ編集
-  = render partial: 'form', locals: { group: @group }
+  .Backform
+    .Backform__center
+      .Backform__center__logo
+        ポイント名 編集 削除
+        = render partial: 'form', locals: { group: @group }

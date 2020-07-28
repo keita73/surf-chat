@@ -1,9 +1,9 @@
 .AccountPage
   .AccountPage__title
-    %h2 Edit Account
+    %h2 SURFーCHAT
     %h5 アカウントの編集
     = link_to "ログアウト",  destroy_user_session_path, method: :delete, class: 'Button'
-    = link_to "トップページに戻る", :back, class: 'Button'
+    = link_to "波情報に戻る", :back, class: 'Button'
   .AccountPage__form
     = form_for(current_user) do |f|
       .FormField
