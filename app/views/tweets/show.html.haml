@@ -1,0 +1,11 @@
+.contents.row
+  .content_post{style: "background-image: url(#{@tweet.image});"}
+    .more
+      %ul.more_list
+        %li
+          = link_to '編集', edit_group_tweet_path(@group,@tweet), method: :get
+        %li
+          = link_to '削除', group_tweet_path(@group,@tweet), method: :delete
+    %p= @tweet.text
+    %span.name
+      = @tweet.name

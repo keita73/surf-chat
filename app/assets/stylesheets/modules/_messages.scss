@@ -8,7 +8,7 @@
 }
 
 .SideBar {
-  color: black;
+  color: rgb(32, 31, 31);
   width: 300px;
 }
 
@@ -18,33 +18,29 @@
   background-image: url(https://www.dcm-ekurashi.com/images/goods/4977932211629_2.jpg);
   background-size: cover;
   // background-color: #20B2AA;
-  height: 50px;
+  height: 70px;
   padding: 0 20px;
   display: flex;
   align-items: center;
   // justify-content: center;
   &__list{
-    // height: 20px;
+    height: 20px;
     width: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   &__userName {
-    // display: flex;
-    // height: 35px;
-    font-size: 30px;
-    // font-weight: bold;
-    // justify-content: center;
-    margin-left: 40px;
-    font-family: 'HiraMinProN-W6',
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    Meiryo,
-    sans-serif;
-    // background-color: white;
-    // border-radius: 30px;
+    box-shadow: 5px 5px 0px #918e8e;
+    background-color: #5FBAC2;
+    color: #ffffff;
+    text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
+    padding-left: 10px;
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
   }
   // &__iconList {
   //   display: flex;
@@ -68,7 +64,7 @@
   // background-image: url(https://previews.123rf.com/images/alleksa/alleksa1708/alleksa170800015/84592079-%E5%8F%A4%E3%81%84%E6%9C%A8%E7%9B%AE%E3%81%AE%E8%83%8C%E6%99%AF.jpg);
   background:url(https://www.dcm-ekurashi.com/images/goods/4977932211629_2.jpg);
   background-size: cover;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 70px);
   padding: 0 20px;
   overflow: scroll;
 }
@@ -90,25 +86,32 @@
   background-size: cover;
   // background-color: ;
   border-radius: 30px;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 3px 3px rgba(0, 0, 0, 0.38);
+  box-shadow: 3px 3px 0px #918e8e;
 }
 
 .Group {
-  box-sizing: border-box;
-  // padding: 20px 0 40px;
-  background-color: white;
+  // box-sizing: border-box;
+  box-shadow: 2px 2px 0px #918e8e;
+  background-color:#ffffff;
+  text-shadow: -1px -1px rgba(0, 0, 0, 0.38), 3px 3px rgba(0, 0, 0, 0.38);
   border-radius: 30px;
   margin: 20px 0;
   
   :hover {
-    background-color: #4ECDC4;
+    background-color: #5FBAC2;
     border-radius: 30px;
     border-bottom: solid 2px #118e9e;
     border-right: solid 2px #118e9e;
+    color: #ffffff;
+    text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
     }
 
   a {
     color: #333;
     text-decoration: none;
+    color: #ffffff;
+    text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 2px 2px rgba(0, 0, 0, 0.38);
   }
   &__name {
     font-size: 20px;
@@ -157,32 +160,58 @@
   background-image: url(https://www.dcm-ekurashi.com/images/goods/4977932211629_2.jpg);
   background-size: cover;
   // background-color: #20B2AA;
-  height: 50px;
+  height: 70px;
   padding: 0 40px;
   border-bottom: solid 1px #eee;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  // &__groupName {
+  //   color: #333;
+  //   font-size: 20px;
+  //   font-family: 'HiraMinProN-W6',
+  //   Arial,
+  //   "Hiragino Kaku Gothic ProN",
+  //   "Hiragino Sans",
+  //   Meiryo,
+  //   sans-serif;
+  // }
   &__groupName {
-    color: #333;
-    font-size: 20px;
-    font-family: 'HiraMinProN-W6',
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    Meiryo,
-    sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    background: #5FBAC2;/*ボタン色*/
+    box-shadow: 3px 3px 0px #918e8e;
+    // border-bottom: solid 3px #627295;
+    border-radius: 50px;/*角の丸み*/
+    font-size: 30px;
+    padding: 0 30px;
+    // border-right: solid 3px #627295;
+    cursor: pointer;
   }
-  &__memberList {
-    color: #999;
-    display: flex;
-    font-size: 12px;
-    margin-top: 15px;
+  &__groupName a {
+    color: #ffffff;
+    text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
   }
-  &__member {
-    padding-right: 5px;
+
+  &__groupName:active{/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+    background-color: #2cdbdb;
   }
+
+  // &__memberList {
+  //   color: #999;
+  //   display: flex;
+  //   font-size: 12px;
+  //   margin-top: 15px;
+  // }
+  // &__member {
+  //   padding-right: 5px;
+  // }
   &__editButton {
     display: block;
     // border: 1px solid #38AEF0;
@@ -192,37 +221,35 @@
     padding: 5px 5px 10px 10px;
     position: absolute;
     right: 80px;
-    background:#00BCD4;/*背景色*/
-    color: #00BCD4;/*=背景色*/
+    background:#5FBAC2;/*背景色*/
+    color: #4ca6ae;/*=背景色*/
     // box-shadow: inset 0 0 2px 2px gray;
-    border-bottom: solid 4px #118e9e;
-    border-right: solid 4px #118e9e;
+    border-bottom: solid 4px rgba(0, 0, 0, 0.2);
+    border-right: solid 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     font-weight: bold;
-    text-shadow: -1px -1px, 1px 1px rgb(0, 0, 0);
+    text-shadow: -1px -1px, 2px 2px rgb(0, 0, 0);
     cursor: pointer;
     font-size: 20px;
-    :hover {
-      color: #00CED1;
-      border-radius: 3px;
-      text-shadow: -1px -1px, 2px 2px rgb(0, 0, 0);
-      border-bottom: solid 6px #118e9e;
-      border-right: solid 6px #118e9e;
-      }
-    
     a {
       text-decoration: none;
-      color: #00BCD4;
+      color: #4ca6ae;
     }
   }
-
+  &__editButton:hover {
+  background-color: #2cdbdb;
+  font-size: 22px;
+  border-bottom: solid 5px #118e9e;
+  border-right: solid 5px #118e9e;
+  }
 }
 
 .MessageField {
   background-color: #fafafa;
   box-sizing: border-box;
   padding: 35px 40px 0;
-  height: calc(100vh - 50px - 90px);
+  height: calc(100vh - 70px - 90px);
   overflow: scroll;
   background-image: url(https://images.funcars.jp/hiace/uploads/ckeditor/pictures/1510/content_dish_vwbustype2.jpg);
   background-size: cover;
@@ -235,8 +262,8 @@
 .MessageInfo {
   display: flex;
   &__userName {
-    color: black;
-    font-size: 16px;
+    color: #fafafa;
+    font-size: 10px;
     font-weight: bold;
     font-family: 'HiraMinProN-W6',
     Arial,
@@ -244,6 +271,12 @@
     "Hiragino Sans",
     Meiryo,
     sans-serif;
+    background: #5FBAC2;/*ボタン色*/
+    box-shadow: 3px 3px 0px #918e8e;
+    // border-bottom: solid 3px #627295;
+    border-radius: 50px;/*角の丸み*/
+    font-size: 30px;
+    padding: 0 30px;
   }
   &__date {
     color: #999;
@@ -256,13 +289,17 @@
   &__content {
     color: #434a54;
     font-size: 14px;
-    background-color: white;
+    background-color: rgb(233, 239, 238);
     width: 40vw;
     border-radius: 20px;
     padding-left: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgb(197, 194, 194);
   }
   &__image{
     height: 300px;
+    border: 1px solid rgb(197, 194, 194);
   }
 }
 
@@ -285,6 +322,7 @@
     background-color: #fff;
     position: relative;
     border-radius: 10px;
+    top: 5px;
   }
   &__inputContent {
     border: none;
@@ -296,10 +334,14 @@
     height: 50px;
     position: absolute;
     right: 10px;
+    color: gray;
+    font-size: 35px;
+    cursor: pointer;
   }
   .fa-image {
     line-height: 50px;
     font-size: 25px;
+    cursor: pointer;
   }
 
   &__submit {
@@ -311,30 +353,36 @@
     // margin-left: 15px;
     // padding: 0 30px;
     font-size: 20px;
-    height: 30px;
+    top: 25px;
+    height: 35px;
     line-height: 20px;
     margin-top: 10px;
     padding: 5px 10px 20px 10px;
     position: absolute;
     right: 70px;
-    background:#00BCD4;/*背景色*/
-    color: #00BCD4;/*=背景色*/
-    box-shadow: inset 0 2px 0 #00BCD4(255,255,255,0.2);
-    border-top: solid 2px #118e9e;
-    border-left: solid 2px #118e9e;
+    background:#5FBAC2;/*背景色*/
+    color: #4ca6ae;/*=背景色*/
+    border-bottom: solid 4px rgba(0, 0, 0, 0.2);
+    border-right: solid 4px rgba(0, 0, 0, 0.2);
+    // border-bottom: solid 4px #118e9e;
+    // border-right: solid 4px #118e9e;
     border-radius: 4px;
     font-weight: bold;
-    text-shadow: -1px -1px, 1px 1px rgb(0, 0, 0);
+    text-shadow: -1px -1px, 2px 2px black;
     cursor: pointer;
-    position: absolute;
-    :hover {
-      // background-color: #00CED1;
-      font-size: 30px;
-      // border-bottom: solid 4px #118e9e;
-      // border-right: solid 4px #118e9e;
-    }
+    border-top: aliceblue;
+    border-left: aliceblue;
   }
-  .Hidden {
+  &__submit:hover {
+    font-size: 22px;
+    border-bottom: solid 5px #118e9e;
+    border-right: solid 5px #118e9e;
+    background-color: #2cdbdb;
+  }
+  .Hiddens {
     display: none;
   }
 }
+ .Hiddens {
+   display: none;
+ }

@@ -6,6 +6,7 @@ class UsersController < ApplicationController
       format.html
       format.json
     end
+    # @tweets = current_user.tweets
   end
 
   def edit

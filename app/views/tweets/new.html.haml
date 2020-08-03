@@ -1,0 +1,13 @@
+.back__images
+  .contents.row.edit
+    .container
+      .form__wish
+        = form_with model: [@group, @tweet], local: true do |form|
+          %h3 投稿する
+          .input-box
+          = form.text_field :image, placeholder: "Image Url", class: 'input-image'
+          -#   = form.label :image, class: 'Form__inputImage' do
+          -#     = icon('far', 'image', class: 'Form__icon')
+          -#     = form.file_field :image, class: 'Hiddens'
+          = form.text_area :text, placeholder: "text", rows: "10", class: 'input-text'
+          = form.submit "投稿", class: 'submit-bttom'
