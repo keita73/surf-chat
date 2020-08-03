@@ -1,4 +1,4 @@
-# CHAT=SPACE （リポジトリ/プロジェクト/OSSなどの名前）
+# CHAT=SPACE 
  
 波情報共有チャット
  
