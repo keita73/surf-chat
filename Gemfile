@@ -59,3 +59,8 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
+
+group :development, :production, :test do
+  gem 'devise'
+  gem 'jquery-rails'
+end
