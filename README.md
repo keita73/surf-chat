@@ -11,7 +11,7 @@ ajaxを用いた、非同期通信による投稿、自動スクロール、自�
 
 
 ## Demo
-![demo](https://gyazo.com/264e8150713da5c433ca818db2370374)
+<img width="1440" alt="スクリーンショット 2020-08-27 16 50 34" src="https://user-images.githubusercontent.com/67895874/91633629-f34f3c80-ea24-11ea-9d57-76b2960cd7b6.png">
 
 ## Dependency
 言語: Ruby 2.5.1
